@@ -1,0 +1,31 @@
+
+安装Python：
+
+	Linux:
+		sudo apt-get install pip
+		pip install -U pip // 更新pip
+		pip install <模块名> // 安装包
+		pip uninstall <模块名> // 卸载包
+	Mac:
+		brew install pip //  安装pip
+		pip install -U pip // 更新pip
+		pip install <模块名> // 安装包
+		pip install <模块名> // 卸载包
+	Windows:
+		python -m pip install -U pip
+
+
+安装Anaconda：
+	
+	下载:https://www.continuum.io/downloads
+	命令行创建和启动环境:
+		conda create --name py27 python=2.7 o activate py27
+	列出安装packages:
+		conda list
+	安装package:
+		conda install numpy(conda install 会安装或更新库所依赖的各种库，pip install不 会更新)
+	Jupyter QtConsole or IPython(命令行式)
+		conda update ipython 或 如需本地安装pip install ipython
+	Jupyter Notebook(Web):
+		pip install jupyter
+	spyder(IDE，如需本地安装推荐Pycharm)

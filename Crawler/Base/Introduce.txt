@@ -1,0 +1,115 @@
+
+
+# 什么是爬虫？
+
+- 1990诞生于FTP
+- 
+
+
+# 为什么Python写爬虫？
+
+- 上手容易
+- 免费开源
+- 跨平台
+- 框架和库支持丰富
+
+
+# Python开发环境搭建
+
+- https://www.python.org/
+- Guido van Rossum
+- 版本选择：2.7/3.5
+- 发明的目的：平衡C和Shell
+
+# HTTP简介 HTML/XML/Json
+
+- HyperText Transfer Protol
+- Uniform Resources Identifer: URI强调资源
+- Uniform Resources Locator: URL强调资源的位置
+
+- 常用的请求：
+	1.OPTIONS：可选，返回服务器针对特定资源做支持的http请求方法
+	2.HEAD：
+	3.GET：向特定资源发出请求
+	4.PUT：向指定资源上传
+	5.POST：向指定的资源提交数据进行处理请求
+	6.DELETE：请求服务器删除指定URI所标识的资源
+	7.PATCH：将局部修改应用于某一资源
+
+- HTTP状态码：
+	1.200/OK：请求成功
+	2.201/Created：请求已实现，资源已建立
+	3.202/Accepeted：已接受，尚未处理
+	4.400/Bad Request:无法理解请求
+	5.401/Unauthorized:需要验证
+	6.403/Forbiden:拒绝执行
+	7.404/Not Found:未发现
+
+- HTML (HyperText Markup Language):
+	1.本事属于标记语言
+	2.标签与元素
+	3.DOM文档模型
+
+- XML（extensible Markup Language）:
+	1.树结构
+	2.父子关系
+
+- JSON(JacaScript Object Notion):
+	1.小、快、易
+
+
+# MySQL && Apache 安装和配置
+- MySQL：
+	- sudo apt-get install mysql-server mysql-client
+	- mysql -p hostname -u username -p
+	- 浏览器操作数据库的软件：phpmysqladmin
+	- MySQL常用命令：
+		show database
+		create database dbname：创建一个新的数据库
+		use dbname：使用指定的数据库
+		show tables：显示数据库所有的表
+		desc tbname: 显示表结构
+
+- SQLite：
+	1.方便、轻量
+	2.无法应付大量数据
+
+
+# 爬虫框架介绍
+- 工作流程：
+	1.将种子放入队列
+	2.从队列获取URL，抓取内容
+	3.解析内容，将需要进一步爬取的内容放入队列，存储解析后的内容
+- 抓取策略：
+	1.深度优先：
+	2.广度优先：
+	3.PageRank：-> 排序，高优先级
+	4.大战优先策略：
+- 去重：
+	1.Hash表
+	2.bloom过滤器
+
+
+# robots规范和爬虫原则
+
+- 质量标准：
+	1.分布式
+	2.可伸缩性
+	3.性能和有效性
+	4.质量
+	5.新鲜性
+	6.更新
+	7.可拓展性
+
+- more：
+	1.map/Reduce
+	2.布隆过滤器
+
+- Robots：
+	1.网站和搜索引擎的沟通方式
+
+
+
+
+
+
