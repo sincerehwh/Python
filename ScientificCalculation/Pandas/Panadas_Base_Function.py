@@ -210,6 +210,55 @@ print(df.applymap(_format))
 print(df['a'].map(_format))
 
 
+
+'''
+
+	 排序和排名：
+
+	 	• 对行或列索引进行排序
+
+		• 对于DataFrame，根据任意一个轴上的索引进行排序
+
+		• 可以指定升序降序
+
+		• 按值排序
+
+		• 对于DataFrame，可以指定按值排序的列
+
+		• rank函数
+'''
+
+# 根据索引排序，对DataFrame指定轴
+ser = Series(range(4),index = list("abcd"))
+print(ser.sort_index())
+frame = DataFrame(np.arange(8).reshape((4,2)),index=['list1','list2','list3','list4'],columns=list('ab'))
+print(frame.sort_index())
+print(frame.sort_index(axis=1))
+print(frame.sort_index(axis=1,ascending=False)) # 降序排列
+
+
+# 根据值排序
+serser = Series([4,7,-3,-2])
+print(serser.sort_values) 
+
+# 对DataFrame指定列排序
+frame = DataFrame({'a':[1,2,3],'b':[4,5,6]})
+print(frame)
+print(frame.sort_values(by='b'))
+print(frame.sort_values(by=['a','b']))
+
+
+# rank,求排名的平均位置（从1开始）
+s = Series([1,2,3,4,5,6,7,8,9])
+print(s.rank())
+print(s.rank(method='first')) #  去第一次出现，不求平均值
+print(s.rank(ascending=False,method='max')) # 逆序，并取最大值
+frame = DataFrame({'b':[1,2,3,4,5],'c':[1,2,3,4,5],'d':[1,2,3,4,5],'c':[0,9,8,7,0]})
+print(frame)
+print(frame.rank(axis=1))
+
+
+
 '''
 
 	带有重复值的索引：
@@ -218,17 +267,14 @@ print(df['a'].map(_format))
 
 '''
 
-print('重复的索引')
+# print('重复的索引')
 # obj = Series(range(5), index = ['a', 'a', 'b', 'b', 'c'])
 # print(obj.index.is_unique) # 判断是非有重复索引
-# print(obj['a'][0])
-# print(,obj.a[1])
+# print(obj['a'])               
 
 
-df = DataFrame(np.random.randn(4, 3), index = ['a', 'a', 'b', 'b'])
-print(df)
-print(df.ix['b'].ix[0])
-print(df.ix['b'].ix[1])
-
-
+# df = DataFrame(np.random.randn(4, 3), index = ['a', 'a', 'b', 'b'])
+# print(df)
+# print(df.ix['b'].ix[0])
+# print(df.ix['b'].ix[1])
 
