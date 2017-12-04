@@ -1,0 +1,73 @@
+
+# 基础的
+
+ - HTTP
+
+  - HTML/XML/Json
+
+  - MySQL/SQLite
+
+  - Paser:
+ 
+  - Process
+	
+  - Strategy
+
+  - Deweight 
+
+  - Robots norm
+	
+  - craswer mass
+
+  - CSS
+
+  - XPath
+
+  - Json
+
+  - Python handle XML
+
+  - Regular expression
+
+  - Selenium profile
+
+# 主要方法：
+	
+  - Requests
+
+  - Beautifulsoup
+
+  - HTMLParser
+	
+  - 数据库编程
+	
+  - 登陆问题
+
+# 工业框架：
+	
+  - Scrapy
+
+# 并发编程：
+	
+  - 多进程
+	
+  - 多线程
+
+  - 线程池
+	
+  - 异步IO
+	
+	Twisted与异步编程
+
+# 分布式爬虫：
+	
+	消息队列
+	
+	Redis简介
+	
+	Scrapy-Redis
+
+	
+	
+
+
