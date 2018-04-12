@@ -63,8 +63,62 @@ print("{:30,.3f}".format(10e10)) # 分隔符
 
 
 #########  对齐方式 #########
-print("{0:<30}1\n{1}{2:>30}".format("Right","Center","Left"))
+print("{0:<20}\n{1:^20}\n{2:>20}".format("Right","Center","Left"))
 
+print("{0:10.2f}\n{1:=10.3f}".format(100,-100)) # 等号填充
+
+print("{:b}".format(42))
+print("{:#b}".format(42))
+print("{:g}".format(42))
+print("{:#g}".format(42))
+print("{:x}".format(42))
+print("{:#x}".format(42))
+
+
+
+#########			#########
+######### 字符串方法 #########
+#########  			#########
+# center find join lower
+# replace split strip translate 
+
+print("louis".center(30))
+print("louis".center(30,"^"))
+
+print("louis".find("is"))
+print("louis".find("is",0,16)) # [0,16)
+
+li = ['1','2','3','4','5','6']
+print("+".join(li))
+
+print("HELLO".lower())
+print("hello".upper())
+print("h l world !".title())
+
+print("I am a prog".replace("a","^^"))
+
+spl = "12+13+14"
+print(spl.split("+"))
+print(int(spl.split("+")[0]))
+
+stri = "  sdfdf ".strip() # 剔除两端的空格
+print(stri)
+stri = "***!!! name is a name *22!!** ".strip(" *!2")
+print(stri)
+
+
+table = str.maketrans(".","P")
+tran = " ..OO.. ".translate(table)
+print(tran)
+
+# 判断字符串是否满足特定的条件
+print("123".isalnum())
+print("123".isalpha())
+print("123".isdigit())
+print("123.0".isdecimal())
+print("Aa".islower())
+print("Ab".isupper())
+print("Ab".istitle())
 
 
 
