@@ -38,7 +38,7 @@ finally:
 
 # warning
 
-from warnings import warn
+from warnings import warn,filterwarnings
 
 warn("warnings")
 warn("warnings",DeprecationWarning)
